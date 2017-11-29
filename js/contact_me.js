@@ -66,3 +66,10 @@ $(function() {
 $('#name').focus(function() {
     $('#success').html('');
 });
+
+$(".navbar-inverse .navbar-nav > li > a").click(function() {
+    $('html, body').animate({
+        scrollTop: $(this.hash).offset().top - 50
+    }, 800);
+    return false;
+});
