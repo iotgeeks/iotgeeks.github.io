@@ -42,5 +42,5 @@ $('.owl-carousel').owlCarousel({
     responsive:true,
     items:1,
     dots:false,
-    // autoplay:true
+    autoplay:true
 })
