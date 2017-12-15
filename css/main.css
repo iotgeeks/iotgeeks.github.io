@@ -1020,3 +1020,59 @@ screen and (max-device-width:1050px) {
 .wwd-model .modal-header {
     background: #52d300;
 }
+.up-comming h3{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 35px;
+}
+#services .large{
+    margin-bottom: 20px;
+}
+.grid figcaption{
+    background-color: #404547;
+}
+.grid figcaption a{
+    background: #52d300;
+    border-color: #52d300
+}
+.grid figcaption h5{
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/*Responsive*/
+@media (max-width: 767px){
+    #about img {
+        margin: 0 auto;
+    }
+    #about h3 {
+        text-align: center;
+    }
+    .tag_mission p {
+        text-align: center;
+        max-width: 470px;
+        margin:20px auto;
+    }
+    .vision-left:after, .mission-right:after{
+        display: none;
+    }
+    .mission-right figure {
+        margin-top: 40px;
+    }
+    .og-grid li{
+        margin: 0px;
+        width: 100%;
+        margin-bottom: 25px;
+        min-height: initial;
+    }
+    .row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}
+@media (max-width: 480px){
+    
+}
