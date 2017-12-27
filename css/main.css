@@ -1046,7 +1046,34 @@ screen and (max-device-width:1050px) {
     color: #fff;
     opacity: 1;
 }
-
+#makerspace h2{
+    text-transform: uppercase;
+}
+#makerspace .wwa-block {
+    padding-top: 0px;
+}
+#makerspace .wwa-block h3.centered {
+    text-align: center;
+    font-weight: 700;
+}
+#makerspace .og-grid li a:hover{
+    background: transparent;
+}
+#makerspace .og-grid li a:hover, #makerspace .og-grid li a{
+    color: #404547;
+}
+#makerspace .og-grid li a{
+    border:none;
+}
+#makerspace .og-grid{
+    padding-top: 0px;
+}
+.wwa-block p {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
 
 /*Responsive*/
 @media (max-width: 767px){
