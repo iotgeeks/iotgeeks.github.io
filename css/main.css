@@ -1009,7 +1009,7 @@ screen and (max-device-width:1050px) {
 }
 .og-grid li a p{
     margin-bottom: 0px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-size: 18px;
 }
 .og-grid li a:hover{
@@ -1040,6 +1040,10 @@ screen and (max-device-width:1050px) {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.modal-header .close{
+    color: #fff;
+    opacity: 1;
 }
 
 
