@@ -21,41 +21,30 @@ if(IsInjected($visitor_email))
     exit;
 }
 
-$email_from = 'manisokda@gmail.com';//<== update the email address
-$email_subject = "New Form submission";
-$email_body = "You have received a new message from the user $name.\n".
-    "Here is the message:\n $message".
-    
-$to = "manisokda@gmail.com";//<== update the email address
-$headers = "From: $email_from \r\n";
-$headers .= "Reply-To: $visitor_email \r\n";
-//Send the email!
-mail($to,$email_subject,$email_body,$headers);
-//done. redirect to thank-you page.
-header('Location: thank-you.html');
 
+$from = $visitor_email;
+$to = "sathiyaraj45@gmail.com";
+$subject = "Hi";
+$body = $message;
 
-// Function to validate against any email injection attempts
-function IsInjected($str)
-{
-  $injections = array('(\n+)',
-              '(\r+)',
-              '(\t+)',
-              '(%0A+)',
-              '(%0D+)',
-              '(%08+)',
-              '(%09+)'
-              );
-  $inject = join('|', $injections);
-  $inject = "/$inject/i";
-  if(preg_match($inject,$str))
-    {
-    return true;
-  }
-  else
-    {
-    return false;
-  }
-}
-   
+$host = "smtp.gmail.com";
+$username = "sathiyaraj45@gmail.com";
+$password = "rp_sathiyaraj";
+
+$headers = array ('From' => $from,
+  'To' => $to,
+  'Subject' => $subject);
+$smtp = Mail::factory('smtp',
+  array ('host' => $host,
+    'auth' => true,
+    'username' => $username,
+    'password' => $password));
+
+$mail = $smtp->send($to, $headers, $body);
+
+if (PEAR::isError($mail)) {
+  echo("<p>" . $mail->getMessage() . "</p>");
+ } else {
+  echo("<p>Message successfully sent!</p>");
+ }
 ?> 
