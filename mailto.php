@@ -28,8 +28,8 @@ $subject = "Hi";
 $body = $message;
 
 $host = "smtp.gmail.com";
-$username = "sathiyaraj45@gmail.com";
-$password = "rp_sathiyaraj";
+$username = "";
+$password = "";
 
 $headers = array ('From' => $from,
   'To' => $to,
