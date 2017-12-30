@@ -1150,6 +1150,9 @@ ul.social-buttons li{
 #og-grid .og-grid-text p, #about .text-center{ 
     text-align: center !important;
 }
+.member a img {
+    max-width: 30px;
+}
 
 /*Responsive*/
 @media (max-width: 767px){
